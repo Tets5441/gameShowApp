@@ -23,9 +23,9 @@ function getRandomPhraseArray(arr){
 
 // do stuff any arr that is passed in, and add to `#phrase ul`
 function addPhraseToDisplay(arr) {
-    for(i = 0; i < arr.length; i += 1) {
-        li = document.createElement('li');
-        li.textContent = arr[i]
+    for(let i = 0; i < arr.length; i += 1) {
+        const li = document.createElement('li');
+        li.textContent = arr[i].toUpperCase
         phraseUL.appendChild('li');
         if (arr[i] = '') {
             li.className = 'letter';
@@ -40,9 +40,21 @@ addPhrasetoDisplay(phraseArray);
 
 // check letter function
 
-function checkLetter() {
-    
+function checkLetter(selected) {
+    const letterFound = null;
+    const answers = phraseUL.chilrdren;
+    for(let i = 0; i < answers.length; i =+ 1); {
+        if (answers[i].textContent() === selected) {
+           answers[i].classList.add('show');
+            letterFound = true;
+        }
+    }
+    return letterFound;
 }
+
+// WHY IS THIS NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 
 
 
