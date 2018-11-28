@@ -40,6 +40,8 @@ addPhrasetoDisplay(phraseArray);
 
 // WHY IS THIS NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+//test github
+
 
 
 
