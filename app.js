@@ -4,7 +4,7 @@ const startBtn = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 const letter = document.getElementsByClassName('letter');
 const space = document.getElementsByClassName('space');
-//const phraseArray = getRandomPhraseAsArray(phrases);
+const UL = document.querySelector('UL')
 let missed = 0;
 
 
@@ -17,7 +17,7 @@ const phrases = ['IRON MAIDEN', 'MACHINE HEAD', 'FAITH NO MORE', 'MAD CADDIES', 
 
 //do stuff to any arr that is passed in 
 function getRandomPhraseArray(arr){
-    return randomPhrase = arr[math.floor(math.random() * arr.length)];
+    return phrase = arr[Math.floor(Math.random() * arr.length)]; 
 }
 
 // set phrase
@@ -25,7 +25,7 @@ function addPhraseToDisplay(arr) {
     for(let i = 0; i < arr.length; i += 1) {
         let li = document.createElement('li');
         li.textContent = arr[i].toUpperCase;
-        phraseUL.appendChild('li');
+        UL.appendChild(li);
         if (arr[i] != '') {
             li.className = 'letter';
         } else {
@@ -34,13 +34,13 @@ function addPhraseToDisplay(arr) {
     }
 }
 
-const phraseArray = getRandomPhraseAsArray(phrases);
-addPhrasetoDisplay(phraseArray);
+const phraseArray = getRandomPhraseArray(phrases);
+addPhraseToDisplay(phraseArray);
 
 
-// WHY IS THIS NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-//test github
+
+
 
 
 
