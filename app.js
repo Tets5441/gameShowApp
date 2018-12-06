@@ -1,5 +1,5 @@
 const qwerty = document.getElementById('qwerty');
-const phrase = document.getElementById('phrase');
+let phrase = document.getElementById('phrase');
 const startBtn = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 const letter = document.getElementsByClassName('letter');
@@ -24,9 +24,9 @@ function getRandomPhraseArray(arr){
 function addPhraseToDisplay(arr) {
     for(let i = 0; i < arr.length; i += 1) {
         let li = document.createElement('li');
-        li.textContent = arr[i].toUpperCase;
+        li.textContent = arr[i].toUpperCase();
         UL.appendChild(li);
-        if (arr[i] != '') {
+        if (arr[i] != ' ') {
             li.className = 'letter';
         } else {
             li.className = 'space';
@@ -36,6 +36,26 @@ function addPhraseToDisplay(arr) {
 
 const phraseArray = getRandomPhraseArray(phrases);
 addPhraseToDisplay(phraseArray);
+
+// check if the letter selected is correct 
+
+function checkLetter(selected) {
+    let letterFound = null;
+    let answers = UL.children;
+    for(let i = 0; i < answers.length; i += 1); {
+        if (answers[i].textContent() === selected) {
+           answers[i].classList.add('show');
+            letterFound = true;
+        }
+    }
+    return letterFound;
+}
+
+// get letter pressed on keyboard and check against phrase
+qwerty.addEventListener('click', (e) => {
+
+});
+   
 
 
 
