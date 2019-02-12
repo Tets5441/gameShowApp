@@ -23,8 +23,6 @@ startBtn.addEventListener('click', (event) => {
 const getRandomPhraseArray = arr => {
   return phrase = arr[Math.floor(Math.random() * arr.length)]; 
 }
-//random phrase split array
-
 
 //Set the game display
 const addPhraseToDisplay = arr => {
@@ -81,13 +79,12 @@ function checkWin() {
       for (let i = 0; i < heart.length; i+= 1) {
         heart[i].src = 'images/liveHeart.png';
       }
-      for (i = 0; i < keyboardButton.length; i++) {
+      for (i = 0; i < keyboardButton.length; i+= 1) {
         keyboardButton[i].removeAttribute('class');
         keyboardButton[i].removeAttribute('disabled');
       }
       addPhraseToDisplay(next);
     });
-  //}
 }
 
 // add event listener to keyboard
