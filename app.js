@@ -40,6 +40,7 @@ const addPhraseToDisplay = arr => {
 
 const phraseArray = getRandomPhraseArray(phrases);
 addPhraseToDisplay(phraseArray);
+console.log(phraseArray);
 
 // check if guessed letter is correct
 
@@ -48,9 +49,10 @@ const checkLetter = yourGuess => {
   let letterFound = null;
   for(let i = 0; i < letters.length; i+= 1) {
     if (letters[i].textContent === yourGuess ) {
+      letters[i].style.transition = 'all 3s';
       letters[i].classList.add('show');
       letterFound = true;
-    }
+    } 
   } return letterFound
 }
 
